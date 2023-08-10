@@ -1,6 +1,10 @@
 # lamgo
 
+_... as in Lambda + Go_
+
 This is a simple AWS Lambda template for Go to write serverless functions as a single binary.
+
+> Note: Still a work in progress
 
 It uses [AWS SAM](https://aws.amazon.com/serverless/sam/) to build and deploy the Lambda function.
 
