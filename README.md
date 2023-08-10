@@ -15,7 +15,7 @@ It uses [AWS SAM](https://aws.amazon.com/serverless/sam/) to build and deploy th
 - [AWS SAM](https://aws.amazon.com/serverless/sam/)
 - [Make](https://www.gnu.org/software/make/)
 - [AWS SDK for Go](https://aws.amazon.com/sdk-for-go/)
-- [Logrus](https://github.com/sirupsen/logrus)
+- [Zap](https://github.com/uber-go/zap)
 
 ## Prerequisites
 
@@ -43,15 +43,15 @@ It uses [AWS SAM](https://aws.amazon.com/serverless/sam/) to build and deploy th
     target
     ```
    NOTE: Set the `SAM configuration environment` to `dev` or edit the Makefile deployment
-
-5. Run the Lambda function locally
-    ```bash
-    make dev
-    ```
-6. Deploy the Lambda function to AWS
+5. Deploy the Lambda function to AWS
     ```bash
     make deploy
     ```
+
+Run locally using:
+```bash
+go run cmd/api/main.go
+```
 
 ## License
 
