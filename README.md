@@ -8,6 +8,15 @@ This is a simple AWS Lambda template for Go to write serverless functions as a s
 
 It uses [AWS SAM](https://aws.amazon.com/serverless/sam/) to build and deploy the Lambda function.
 
+## Technologies
+
+- [Go](https://golang.org/)
+- [Echo](https://echo.labstack.com/)
+- [AWS SAM](https://aws.amazon.com/serverless/sam/)
+- [Make](https://www.gnu.org/software/make/)
+- [AWS SDK for Go](https://aws.amazon.com/sdk-for-go/)
+- [Logrus](https://github.com/sirupsen/logrus)
+
 ## Prerequisites
 
 - [AWS CLI](https://aws.amazon.com/cli/)
@@ -17,18 +26,32 @@ It uses [AWS SAM](https://aws.amazon.com/serverless/sam/) to build and deploy th
 ## Usage
 
 1. Clone this repository
-2. Run `make` to build the binary
-3. Run `make deploy` to deploy the Lambda function
+    ```bash
+    git clone https://github.com/richardamare/lamgo.git
+    ```
+2. Change directory to the cloned repository
+    ```bash
+    cd lamgo # or whatever you named the directory
+    ```
+3. Configure the AWS CLI
+    ```bash
+    aws configure
+    ```
+4. Configure the AWS SAM deployment
+    ```bash
+    sam deploy --guided
+    target
+    ```
+   NOTE: Set the `SAM configuration environment` to `dev` or edit the Makefile deployment
 
-
-## Technologies
-
-- [Go](https://golang.org/)
-- [Echo](https://echo.labstack.com/)
-- [AWS SAM](https://aws.amazon.com/serverless/sam/)
-- [Make](https://www.gnu.org/software/make/)
-- [AWS SDK for Go](https://aws.amazon.com/sdk-for-go/)
-- [Logrus](https://github.com/sirupsen/logrus)
+5. Run the Lambda function locally
+    ```bash
+    make dev
+    ```
+6. Deploy the Lambda function to AWS
+    ```bash
+    make deploy
+    ```
 
 ## License
 
