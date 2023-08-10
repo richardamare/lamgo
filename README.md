@@ -52,6 +52,12 @@ Run locally using:
 go run cmd/api/main.go
 ```
 
+## Demo
+
+Currently, there are just two endpoints for demonstration purposes:
+* `/health`
+* `/hello?name=`
+
 ## License
 
 [MIT](./LICENSE)
