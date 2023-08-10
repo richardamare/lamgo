@@ -40,7 +40,6 @@ It uses [AWS SAM](https://aws.amazon.com/serverless/sam/) to build and deploy th
 4. Configure the AWS SAM deployment
     ```bash
     sam deploy --guided
-    target
     ```
    NOTE: Set the `SAM configuration environment` to `dev` or edit the Makefile deployment
 5. Deploy the Lambda function to AWS
