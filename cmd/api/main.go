@@ -7,6 +7,7 @@ import (
 	echoadapter "github.com/awslabs/aws-lambda-go-api-proxy/echo"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/richardamare/lamgo/handler"
 	"github.com/sirupsen/logrus"
 	"os"
 )
@@ -24,6 +25,7 @@ func init() {
 	e.HidePort = true
 
 	// Set up the handlers
+	handler.SetupHandlers(e)
 
 	// Middleware
 	e.Use(middleware.Recover())
